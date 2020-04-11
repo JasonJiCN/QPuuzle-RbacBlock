@@ -1,0 +1,8 @@
+1.启动后，先注释掉layout.html文件中的breadcrumb request，这一行，必须等到数据库的用户、组、权限分配好后，才可以开启。
+2.先打开权限链接 /rbac/multi/permissions 把最上面的所有检测的权限命名，并且点击“新建”按钮保存
+3.打开菜单链接 /rbac/menu/list/ 设定一级菜单，和二级菜单
+4.打开组列表链接 /rbac/role/list/ ，添加 “管理员”组，打开数据库，保存这个组的id
+5.打开数据库在用用户表(userinfo)中，添加用户 admin 密码 admin
+6.打开数据库在userinfo_roles中，添加 用户id和组id
+7.打开权限分配链接/rbac/distribute/permissions/ 设定权限
+8.在layout.html中，开启 breadcrumb request
